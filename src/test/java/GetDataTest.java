@@ -23,7 +23,25 @@ public class GetDataTest extends BaseTest{
         expected.add("The 10 Biggest Product Stories of 2019");
 
         Assertions.assertEquals(expected,actual);
+    }
 
+    @Test
+    public void GetNameCardTest(){
+        navigation("https://lennertamas.github.io/roxo/");
+        registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
+        login("Agi", "xx18Cc!");
 
+        Home home = new Home(driver);
+
+        List<String> actual = home.getNames();
+        List<String> expected = new ArrayList<>();
+        expected.add("Simonns Hodge");
+        expected.add("Rekon Montino");
+        expected.add("Ryan Hillary");
+        expected.add("Dockrel Kahn");
+        expected.add("Orino Monteno");
+        expected.add("Welfo Roy");
+
+        Assertions.assertEquals(expected, actual);
     }
 }

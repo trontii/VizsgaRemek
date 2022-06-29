@@ -18,11 +18,11 @@ public class TermsAndConditionsTest extends BaseTest{
 
     @Test
     public void termsTestAccept() throws InterruptedException {
-            TermsAndConditions terms = new TermsAndConditions(driver);
-            terms.navigate();
-            terms.accept();
-            terms.refresh();
+        TermsAndConditions terms = new TermsAndConditions(driver);
+        terms.navigate();
+        terms.accept();
+        terms.refresh();
 
-            Assertions.assertFalse(terms.isTermsandConditionsVisible());
+        Assertions.assertFalse(terms.isTermsandConditionsVisible());
     }
 }

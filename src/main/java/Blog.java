@@ -15,14 +15,6 @@ public class Blog {
 
     By blogButton = By.xpath("//*[@class=\"nav-link\" and @href=\"https://lennertamas.github.io/roxo/blog\"]"); //*[@class="navbar-nav ml-auto main-nav"]/li[4]
     By nextPageButton = By.xpath("//*[@class=\"pagination\"]/li[5]");
-
-   // By blogDiv1 = By.xpath("(//*[@href=\"https://lennertamas.github.io/roxo/blog/design-inspiration-the-best-projects-from-december/\"])[1]");
-   // By blogDiv2 = By.xpath("(//*[@href=\"https://lennertamas.github.io/roxo/blog/the-10-biggest-rebrands-and-logo-designs-of-2019/\"])[1]");
-   // By blogDiv3 = By.xpath("(//*[@href=\"https://lennertamas.github.io/roxo/blog/design-inspiration-the-best-projects-from-november/\"])[1]");
-   // By blogDiv4 = By.xpath("(//*[@href=\"https://lennertamas.github.io/roxo/blog/pt-chooses-classic-blue-for-its-colour-of-the-year-2020/\"])[1]");
-
-   // By blogDiv5 = By.xpath("(//*[@href=\"https://lennertamas.github.io/roxo/blog/the-10-biggest-product-stories-of-2019/\"])[1]");
-
     By container = By.xpath("//section[@class=\"site-blog\"]//div[@class=\"col-lg-6\"]");
 
     public List<String> getBlogText(){
@@ -46,32 +38,9 @@ public class Blog {
         return result;
     }
 
-   // public String GetText1(){
-   //     return driver.findElement(blogDiv1).getText();
-  //  }
-
-   // public String GetText2(){
-    //    return driver.findElement(blogDiv2).getText();
-   // }
-
-   // public String GetText3(){
-   //     return driver.findElement(blogDiv3).getText();
-   // }
-
-   // public String GetText4(){
-   //     return driver.findElement(blogDiv4).getText();
-    //}
-
-   // public String GetText5(){
-   //     return driver.findElement(blogDiv5).getText();
-   // }
-
     public void clickBlog(){
         driver.findElement(blogButton).click();
     }
 
-    public void clickNext(){
-        driver.findElement(nextPageButton).click();
-    }
 
 }

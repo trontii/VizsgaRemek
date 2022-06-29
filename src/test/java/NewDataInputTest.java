@@ -1,4 +1,3 @@
-import dev.failsafe.internal.util.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
@@ -37,7 +36,7 @@ public class NewDataInputTest extends BaseTest{
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
+    @Test //invalid email
     public void NewDataInvalidEmailTest() throws InterruptedException {
         navigation("https://lennertamas.github.io/roxo/");
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
@@ -49,7 +48,7 @@ public class NewDataInputTest extends BaseTest{
         getintouch.LastName("Simon");
         getintouch.Email("kkkkgmail.com");
         getintouch.AboutTheProject("Wonderful project!");
-        getintouch.SelectProject("wd");
+        getintouch.SelectProject("wd"); // Web Design
         getintouch.ClickOnSendMessage();
 
         // WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(3000));
