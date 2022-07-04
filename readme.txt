@@ -20,6 +20,8 @@ Minden tartalmi elemhez legalább 1, de sok esetben 2, manuális és annak autom
 
 Program nyelve: Java.
 
+Összefoglaló tesztjelentés elérhetősége: https://trontii.github.io/VizsgaRemek/ 
+
 A projekt tesztjeinek felépítésében egy BaseTest gyűjtőoldalt használok. Itt vannak összegyűjtve az oldalra belépéshez kellő adatok, mint a regisztráció, login és navigáció metódusai. Majd ebből a BaseTest osztályból származik az összes többi tesztosztály.
 Oldalanként (Home, About, Portfolio, Blog, Get in touch, Profile) vannak összegyűjtve a különböző oldalakon található DOM elemek és itt vannak megírva a különböző metódusok is, amiket az egyes teszteknél felhasználok.
 
