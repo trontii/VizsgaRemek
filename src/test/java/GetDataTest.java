@@ -1,3 +1,4 @@
+import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -6,6 +7,7 @@ import java.util.List;
 
 public class GetDataTest extends BaseTest{
     @Test
+    @Description("Getting data from Blog - Blogs' main title")
     public void getBlogDataTest(){
         navigation("https://lennertamas.github.io/roxo/");
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
@@ -26,6 +28,7 @@ public class GetDataTest extends BaseTest{
     }
 
     @Test
+    @Description("Getting data from Home NameCards - Names from the Namecards")
     public void GetNameCardTest(){
         navigation("https://lennertamas.github.io/roxo/");
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");

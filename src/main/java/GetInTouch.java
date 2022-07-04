@@ -1,6 +1,10 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GetInTouch {
     WebDriver driver;
@@ -68,5 +72,21 @@ public class GetInTouch {
     public boolean sendingSuccessfull(){
         String style = driver.findElement(sendMessageButton).getAttribute("style");
         return style.equals("display: none;");
+    }
+
+    public void clearInputfields(){
+        driver.findElement(FirstNameInput).clear();
+        driver.findElement(LastNameInput).clear();
+        driver.findElement(EmailInput).clear();
+        driver.findElement(aboutProjectInput).clear();
+    }
+
+    public List<String> inputfieldsIsEmpty(){
+        List<String> list = new ArrayList<>();
+        list.add(driver.findElement(FirstNameInput).getText());
+        list.add(driver.findElement(LastNameInput).getText());
+        list.add(driver.findElement(EmailInput).getText());
+        list.add(driver.findElement(aboutProjectInput).getText());
+        return list;
     }
 }

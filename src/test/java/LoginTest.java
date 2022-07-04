@@ -1,9 +1,11 @@
+import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class LoginTest extends BaseTest{
 
     @Test
+    @Description("Simple login with registered email address, name and password")
     public void logTest1() {
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
         login("Agi", "xx18Cc!");
@@ -14,6 +16,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
+    @Description("Simple login without registered data ")
     public void logTest2() { //nem regisztralt adatokkal próbálunk belépni
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
         login("Agi", "pppppp");

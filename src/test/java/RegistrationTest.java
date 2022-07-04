@@ -1,3 +1,4 @@
+import jdk.jfr.Description;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +15,7 @@ import static java.time.Duration.ofSeconds;
 public class RegistrationTest extends BaseTest{
 
     @Test
+    @Description("Registration with valid email address")
     public void regTest(){
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
         Registration regPage = new Registration(driver);
@@ -24,6 +26,7 @@ public class RegistrationTest extends BaseTest{
     }
 
     @Test
+    @Description("Registration with invalid email address")
     public void registrationTest2(){
         registration("hhh", "xx!", "minonatvgmail.com", "");
         Registration regPage = new Registration(driver);

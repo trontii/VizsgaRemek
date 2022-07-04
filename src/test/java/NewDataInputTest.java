@@ -1,3 +1,4 @@
+import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
@@ -9,6 +10,7 @@ import java.time.Duration;
 
 public class NewDataInputTest extends BaseTest{
     @Test
+    @Description("Get in touch - input data with valid email address")
     public void NewDataGetInTouch() throws InterruptedException {
         navigation("https://lennertamas.github.io/roxo/");
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
@@ -23,9 +25,6 @@ public class NewDataInputTest extends BaseTest{
         getintouch.SelectProject("wd");
         getintouch.ClickOnSendMessage();
 
-       // WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(3000));
-        // presenceOfElementLocated condition
-       // w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//head/script[1]\"")));
         Thread.sleep(3000);
 
         getintouch.ClickOkonAlert();
@@ -37,6 +36,7 @@ public class NewDataInputTest extends BaseTest{
     }
 
     @Test //invalid email
+    @Description("Get in touch - input data with invalid email address")
     public void NewDataInvalidEmailTest() throws InterruptedException {
         navigation("https://lennertamas.github.io/roxo/");
         registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
@@ -51,9 +51,6 @@ public class NewDataInputTest extends BaseTest{
         getintouch.SelectProject("wd"); // Web Design
         getintouch.ClickOnSendMessage();
 
-        // WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(3000));
-        // presenceOfElementLocated condition
-        // w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("\"//head/script[1]\"")));
         Thread.sleep(3000);
         getintouch.ClickOkonAlert();
 

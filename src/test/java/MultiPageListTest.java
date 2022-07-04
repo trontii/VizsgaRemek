@@ -1,3 +1,4 @@
+import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
@@ -6,6 +7,7 @@ import java.util.List;
 public class MultiPageListTest extends BaseTest{
 
         @Test
+        @Description("Steps on multipages list - Blog main titles")
         public void MultiPageBlogTest(){
             navigation("https://lennertamas.github.io/roxo/");
             registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
@@ -26,6 +28,8 @@ public class MultiPageListTest extends BaseTest{
         }
 
         @Test
+        @Description("Steps on multipages list - Portfolio main titles")
+
         public void MultiPagePortfolioTest(){
             navigation("https://lennertamas.github.io/roxo/");
             registration("Agi", "xx18Cc!", "minonatv@gmail.com", "");
